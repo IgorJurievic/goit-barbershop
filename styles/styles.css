@@ -82,11 +82,17 @@ body {
 }
 
 .btn {
+  min-width: 160px;
+  height: 40px;
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
+  line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  border: 1px solid var(--brand-clor);
+  border-radius: 25px;
+  background-color: transparent;
 }
 
 .visually-hidden {
@@ -101,6 +107,17 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/* ------------HEADER---------------- */
+
+.header {
+  padding-bottom: 32px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
 }
 
 .header-link,
@@ -121,20 +138,21 @@ body {
 .site-body {
 }
 
-.header {
-  padding-bottom: 32px;
-}
-
 .header-navigation {
+  display: flex;
+  align-items: center;
 }
 
 .header-logo {
+  margin-right: 131px;
 }
 
 .header-logo-icon {
 }
 
 .header-list {
+  display: flex;
+  gap: 30px;
 }
 
 .header-item {
@@ -143,20 +161,13 @@ body {
 .header-link {
 }
 
+.header-connect {
+  margin-left: auto;
+}
+
 .header-btn {
   color: var(--white-text-color);
-}
-
-.hero-link {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.2em;
-}
-
-.hero-link:hover,
-.hero-link:focus {
-  color: var(--brand-clor);
+  margin-left: 43px;
 }
 
 /* ------HERO------ */
@@ -164,23 +175,37 @@ body {
 .hero {
 }
 
-.hero-list {
+.hero-container {
+  display: flex;
 }
 
-.list {
+.hero-list {
+  width: 100px;
+}
+
+.hero-wrap {
+  flex-grow: 1;
 }
 
 .hero-item {
 }
 
 .hero-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--main-text-color);
 }
 
-.link {
+.hero-link:hover,
+.hero-link:focus {
+  color: var(--brand-clor);
 }
 
 .hero-pre-title {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: 20px;
 }
 
 .hero-title {
@@ -190,6 +215,7 @@ body {
   line-height: 1.18;
   letter-spacing: 0.05em;
   color: var(--white-text-color);
+  margin-bottom: 20px;
 }
 
 .hero-after-title {
@@ -201,13 +227,21 @@ body {
 .about {
 }
 
-.about-list {
+.about-container {
+  display: flex;
+  gap: 30px;
 }
 
-.list {
+.about-list {
+  display: flex;
+  gap: 30px;
 }
 
 .about-item {
+}
+
+.about-wrap {
+  max-width: 470px;
 }
 
 .about-pre-title {
@@ -250,12 +284,22 @@ body {
   margin-bottom: 44px;
 }
 
+.prices-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
 .prices-list {
   padding: 30px 20px;
-  margin-bottom: 44px;
+  width: calc((100% - 30px) / 2);
 }
 
 .prices-item {
+  display: flex;
+  justify-content: space-between;
+}
+.prices-item + .prices-item {
+  margin-top: 20px;
 }
 
 .prices-list-text {
@@ -277,7 +321,12 @@ body {
 .benefits {
 }
 
+.benefits-container {
+  display: flex;
+}
+
 .benefits-list {
+  display: flex;
 }
 
 .benefits-item {
@@ -303,6 +352,9 @@ body {
   line-height: 1.36;
   text-align: center;
   color: var(--main-text-color);
+}
+
+.benefits-wrap {
 }
 
 .benefits-pre-title {
@@ -335,9 +387,12 @@ body {
 }
 
 .barbers-list {
+  display: flex;
+  gap: 30px;
 }
 
 .barbers-item {
+  width: calc((100% - 60) / 3);
 }
 
 .barbers-wrap {
@@ -373,12 +428,18 @@ body {
 }
 
 .gallery-list {
+  display: flex;
+  gap: 30px;
 }
 
 .gallery-item {
+  width: calc((100% - 90) / 4);
 }
 
 /* ------ONLINE----- */
+.online-container {
+  display: flex;
+}
 
 .online-title {
   color: var(--white-text-color);
