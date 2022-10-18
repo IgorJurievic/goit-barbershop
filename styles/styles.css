@@ -176,7 +176,6 @@ body {
 }
 
 .hero-container {
-  background-image: url(../images/Slider.svg);
   display: flex;
 }
 
@@ -186,6 +185,16 @@ body {
 
 .hero-wrap {
   flex-grow: 1;
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.2),
+      rgba(25, 28, 38, 0.2)
+    ),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  padding: 272px 100px 208px 100px;
 }
 
 .hero-item {
@@ -380,6 +389,7 @@ body {
 /* -----BARBERS----- */
 
 .barbers {
+  background-color: #f7f7f7;
 }
 
 .barbers-pre-title {
@@ -421,8 +431,44 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--brand-clor);
+  margin-bottom: 30px;
 }
 
+.barbers-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.barber-soc-item {
+  width: 44px;
+  height: 44px;
+}
+
+.barber-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--main-text-color);
+}
+
+/* .barber-soc-icon {
+  fill: currentColor;
+} */
+
+.barber-soc-link:hover,
+.barber-soc-link:focus {
+  background-color: var(--background-color);
+}
+
+.barber-soc-link:hover .barber-soc-icon,
+.barber-soc-link:focus .barber-soc-icon {
+  fill: var(--brand-clor);
+}
 /* -----GALLERY----- */
 
 .gallery {
