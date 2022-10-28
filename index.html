@@ -18,6 +18,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- animation підключена через JS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body class="site-body">
@@ -45,7 +52,9 @@
           </ul>
         </nav>
         <div class="header-connect">
-          <a class="header-tel" href="tel:+380441111111">+38 044 111 11 11</a>
+          <a class="header-tel link" href="tel:+380441111111"
+            >+38 044 111 11 11</a
+          >
           <button class="header-btn btn" type="button">Online-booking</button>
         </div>
       </div>
@@ -54,31 +63,35 @@
       <!--------------- HERO -------------->
       <section class="hero">
         <div class="container hero-container">
-          <ul class="hero-list list">
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Instagram</a
-              >
-            </li>
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Youtube</a
-              >
-            </li>
-          </ul>
+          <div class="hero-soc">
+            <ul class="hero-list list">
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
           <div class="hero-wrap">
             <p class="hero-pre-title pre-title-light">
               A hair salon for men in Kyiv
             </p>
-            <h1 class="hero-title">BarberShop</h1>
+            <h1 class="hero-title animate__animated animate__bounce">
+              BarberShop
+            </h1>
             <p class="hero-after-title after-title">
               We are experts in trendy men’s haircuts. We work quickly,
               carefully and with style.
@@ -342,7 +355,7 @@
                 width="370"
                 height="346"
               />
-              <div class="barbers-wrap">
+              <div class="barbers-wrap" data-aos="zoom-out">
                 <h3 class="barbers-item-title">Alan Black</h3>
                 <p class="barbers-item-text">Extreme Barber</p>
                 <ul class="barbers-soc-list list">
@@ -400,7 +413,7 @@
       </section>
       <!-- --------------GALLERY------------ -->
       <section class="gallery section">
-        <div class="container">
+        <div class="container" data-aos="zoom-in">
           <p class="gallery-pre-title pre-title-dark">
             In Latin, "barba" means "beard"
           </p>
@@ -508,5 +521,9 @@
         </section>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

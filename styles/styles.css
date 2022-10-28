@@ -6,6 +6,18 @@
   --white-text-color: #ffffff;
 }
 
+/* @keyframes rotator {
+  0% {
+    transform: rotate(0) scale(0.5);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(0.5);
+  }
+} */
+
 p,
 h1,
 h2,
@@ -126,6 +138,13 @@ body {
   border: 1px solid var(--brand-clor);
   border-radius: 25px;
   background-color: transparent;
+  transition: color 200ms linear, background-color 200ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--background-color);
+  background-color: var(--brand-clor);
 }
 
 .visually-hidden {
@@ -144,6 +163,8 @@ body {
 /* ------------HEADER---------------- */
 
 .header {
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -160,6 +181,7 @@ body {
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: var(--white-text-color);
+  transition: color 200ms linear;
 }
 
 .header-link:hover,
@@ -200,6 +222,7 @@ body {
 .header-btn {
   color: var(--white-text-color);
   margin-left: 43px;
+  margin-right: 17px;
 }
 
 /* ------HERO------ */
@@ -211,11 +234,20 @@ body {
   display: flex;
 }
 
+.hero-soc {
+  width: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 40px;
+  padding-left: 27px;
+}
+
 .hero-list {
   display: flex;
-  flex-direction: column;
-  width: 100px;
+  align-items: center;
   gap: 40px;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
 }
 
 .hero-wrap {
@@ -232,7 +264,7 @@ body {
   padding: 272px 100px 208px 100px;
 }
 
-.hero-item:first-child:before {
+.hero-list::before {
   content: "";
   width: 60px;
   height: 1px;
@@ -248,6 +280,7 @@ body {
   display: flex;
   align-items: center;
   gap: 40px;
+  transition: color 200ms linear;
 }
 
 .hero-link:hover,
@@ -288,7 +321,25 @@ body {
   gap: 30px;
 }
 
+.about-item:hover {
+  /* властивість яка працює при ховері  */
+  animation-play-state: paused;
+}
+
 .about-item {
+  animation-name: rotator;
+  /* швидкість обертання */
+  animation-duration: 1250ms;
+  /* затримка обертання */
+  animation-delay: 550ms;
+  /* "часова функція" за якою відбуватиметься анімація */
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* кількість циклів анімації - інфініті=безкінечно */
+  animation-iteration-count: infinite;
+  /* в якому напрямку крутиться анімація */
+  animation-direction: alternate;
+  /* в який стан повернеться об'єк після завершення анімації */
+  animation-fill-mode: backwards;
 }
 
 .about-wrap {
@@ -305,6 +356,8 @@ body {
 .about-after-title {
   color: var(--second-text-color);
   margin-bottom: 20px;
+  /* animation: rotator 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 100ms infinite
+    alternate-reverse backwards; */
 }
 
 .about-text {
@@ -554,6 +607,7 @@ body {
   align-items: center;
   justify-content: center;
   fill: var(--main-text-color);
+  transition: background-color 200ms linear, fill 200ms linear;
 }
 
 /* .barber-soc-icon {
@@ -689,7 +743,9 @@ body {
 
 .footer-wrap {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  max-width: 1600px;
+  justify-content: space-between;
 }
 .footer-text {
   font-weight: 600;
@@ -702,6 +758,7 @@ body {
 .footer-list {
   display: flex;
   gap: 40px;
+  align-items: baseline;
 }
 
 .footer-item {
@@ -713,11 +770,18 @@ body {
   line-height: calc(15 / 11);
   letter-spacing: 0.2em;
   color: var(--main-text-color);
+  transition: color 200ms linear;
 }
 
-.footer-item::before {
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--brand-clor);
+}
+
+.footer-list::before {
   content: "";
   height: 1px;
   width: 60px;
-  background-color: currentColor;
+  background-color: var(--main-text-color);
+  margin-right: auto;
 }
