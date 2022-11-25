@@ -459,7 +459,48 @@
         <div class="container">
           <section class="online section">
             <h2 class="online-title section-title">Online-booking</h2>
-            <button type="button" class="online-btn btn">Send</button>
+            <form class="contacts-form">
+              <div class="contacts-form-top">
+                <div class="contacts-field">
+                  <label for="user-name" class="contacts-label"
+                    ><span>Name*</span></label
+                  >
+                  <input
+                    type="text"
+                    name="user-name"
+                    class="contacts-input"
+                    id="user-name"
+                    required
+                  />
+                </div>
+                <div class="contacts-field">
+                  <label for="user-tel" class="contacts-label"
+                    ><span>Phone*</span></label
+                  >
+                  <input
+                    type="tel"
+                    name="user-tel"
+                    class="contacts-input"
+                    id="user-tel"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="contacts-form-bottom">
+                <div class="contacts-field">
+                  <label for="user-message" class="contacts-label"
+                    >Message</label
+                  >
+                  <textarea
+                    name="user-message"
+                    id="user-message"
+                    rows="10"
+                    class="contacts-textarea"
+                  ></textarea>
+                </div>
+              </div>
+              <button type="button" class="online-btn btn">Send</button>
+            </form>
           </section>
           <!-- -----------CONTACTS------------- -->
           <section class="contacts section">
