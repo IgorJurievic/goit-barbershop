@@ -1,0 +1,17 @@
+.gallery {}
+
+.gallery-pre-title {
+    margin-bottom: 44px;
+}
+
+.gallery-list {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.gallery-item {
+    @include calc(4, 15px);
+    ;
+}

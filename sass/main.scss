@@ -1,0 +1,26 @@
+@import './base/reset';
+
+@import "./utils/variables";
+@import "./utils/placeholders";
+@import "./utils/hidden";
+@import "./utils/mixin";
+
+
+@import "./components/page";
+@import "./components/btn";
+@import "./components/container";
+@import './components/section';
+@import './components/title';
+@import './components/pre-title';
+@import './components/after-title';
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/about';
+@import './layouts/prices';
+@import './layouts/benefits';
+@import './layouts/babrers';
+@import './layouts/gallery';
+@import './layouts/online';
+@import './layouts/contacts';
+@import './layouts/footer';

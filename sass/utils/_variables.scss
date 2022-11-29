@@ -1,0 +1,20 @@
+:root {
+  --background-color: #ffffff;
+  --brand-clor: #ff6c00;
+  --main-text-color: #303030;
+  --second-text-color: #555555;
+  --white-text-color: #ffffff;
+  --trn: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* @keyframes rotator {
+  0% {
+    transform: rotate(0) scale(0.5);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(0.5);
+  }
+} */

@@ -1,0 +1,81 @@
+.barbers {
+    background-color: #f7f7f7;
+    margin-bottom: 20px;
+}
+
+.barbers-title {
+    color: var(--main-text-color);
+    margin-bottom: 44px;
+}
+
+.barbers-list {
+    @extend %list;
+    display: flex;
+    gap: 30px;
+}
+
+.barbers-item {
+    @include calc(3, 15px);
+}
+
+.barbers-wrap {
+    padding-top: 30px;
+}
+
+.barbers-item-title {
+    @include font (18px,
+        1.39,
+        400,
+        0.02em);
+    text-align: center;
+    color: var(--main-text-color);
+    padding-bottom: 8px;
+}
+
+.barbers-item-text {
+    @include font (14px,
+        1.36,
+        inherit,
+        0.02em);
+    text-align: center;
+    color: var(--brand-clor);
+    margin-bottom: 30px;
+}
+
+.barbers-soc-list {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.barber-soc-item {
+    width: 44px;
+    height: 44px;
+}
+
+.barber-soc-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--main-text-color);
+    transition: background-color 200ms linear, fill 200ms linear;
+
+    &:hover,
+    &:focus {
+        background-color: var(--background-color);
+    }
+
+    &:hover .barber-soc-icon,
+    &:focus .barber-soc-icon {
+        fill: var(--brand-clor);
+    }
+}
+
+/* .barber-soc-icon {
+  fill: currentColor;
+} */

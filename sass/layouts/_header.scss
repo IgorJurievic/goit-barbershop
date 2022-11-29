@@ -1,0 +1,57 @@
+.header {
+    position: absolute;
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-link,
+.header-tel {
+    @include font (12px, 1.33, 600, 0.1em);
+    color: var(--white-text-color);
+    transition: color 200ms linear;
+
+}
+
+.header-link:hover,
+.header-link:focus,
+.header-tel:hover,
+.header-tel:focus {
+    color: var(--brand-clor);
+}
+
+.header-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    margin-right: 131px;
+}
+
+.logo-icon {
+    fill: var(--main-text-color);
+}
+
+.header-list {
+    @extend %list;
+    display: flex;
+    gap: 30px;
+}
+
+.header-item {}
+
+.header-connect {
+    margin-left: auto;
+}
+
+.header-btn {
+    color: var(--white-text-color);
+    margin-left: 43px;
+    margin-right: 17px;
+}

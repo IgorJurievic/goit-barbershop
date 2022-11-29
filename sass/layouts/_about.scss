@@ -1,0 +1,61 @@
+.about {}
+
+.about-container {
+    display: flex;
+    gap: 30px;
+}
+
+.about-list {
+    @extend %list;
+    display: flex;
+    gap: 30px;
+}
+
+.about-item {
+    animation-name: rotator;
+    /* швидкість обертання */
+    animation-duration: 1250ms;
+    /* затримка обертання */
+    animation-delay: 550ms;
+    /* "часова функція" за якою відбуватиметься анімація */
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* кількість циклів анімації - інфініті=безкінечно */
+    animation-iteration-count: infinite;
+    /* в якому напрямку крутиться анімація */
+    animation-direction: alternate;
+    /* в який стан повернеться об'єк після завершення анімації */
+    animation-fill-mode: backwards;
+
+    &:hover {
+        /* властивість яка працює при ховері  */
+        animation-play-state: paused;
+    }
+}
+
+.about-wrap {
+    max-width: 470px;
+}
+
+.about-title {
+    margin-bottom: 20px;
+}
+
+.about-after-title {
+    color: var(--second-text-color);
+    margin-bottom: 20px;
+    /* animation: rotator 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 100ms infinite
+    alternate-reverse backwards; */
+}
+
+.about-text {
+    @include font (14px,
+        1.86,
+        inherit,
+        0.02em);
+    color: var(--second-text-color);
+    margin-bottom: 42px;
+}
+
+.about-btn {
+    color: var(--main-text-color);
+}

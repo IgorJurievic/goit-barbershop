@@ -1,0 +1,6 @@
+.after-title {
+    @include font (18px,
+        1.67,
+        inherit,
+        0.02em);
+}
