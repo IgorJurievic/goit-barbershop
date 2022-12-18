@@ -1,58 +1,59 @@
 .contacts {
-    width: calc(50% - 15px);
-    padding-left: 100px;
+  width: calc(50% - 15px);
+  padding-left: 100px;
 }
 
 .contacts-title {
-    color: var(--white-text-color);
-    margin-bottom: 40px;
+  color: var(--white-text-color);
+  margin-bottom: 40px;
 }
 
 .contacts-address {
-    margin-bottom: 70px;
+  margin-bottom: 72px;
 }
 
 .contacts-map-link {
-    @include font (18px, 1.67, 700, 0.02em);
-    color: #9da4bd;
-    margin-bottom: 20px;
-    display: inline-block;
+  @include font(18px, 1.67, 700, 0.02em);
+  color: #9da4bd;
+  margin-bottom: 20px;
+  display: inline-block;
 }
 
 .contacts-list {
-    @extend %list;
+  @extend %list;
 }
 
 .contacts-item:not(:last-child) {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .contacts-link {
-    @include font (18px, 1.67, inherit, 0.02em);
-    color: #9da4bd;
+  @include font(18px, 1.67, inherit, 0.02em);
+  color: #9da4bd;
 }
 
 .contacts-subtitle {
-    @include font (11px, 1.36, 600);
-    text-transform: uppercase;
-    color: var(--white-text-color);
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 18px;
+  @include font(11px, 1.36, 600);
+  text-transform: uppercase;
+  color: var(--white-text-color);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 18px;
 
-    &::before {
-        content: "";
-        height: 1px;
-        width: 60px;
-        background-color: rgba(157, 164, 189, 0.4);
-    }
+  &::before {
+    content: "";
+    height: 1px;
+    width: 60px;
+    background-color: rgba(157, 164, 189, 0.4);
+  }
 }
 
-
-
 .contacts-schedule {
-    @include font (18px, 1.67, inherit, 0.02em);
-    color: #9da4bd;
+  @include font(18px, 1.67, inherit, 0.02em);
+  color: #9da4bd;
+
+  :not(:last-child) {
     margin-bottom: 20px;
+  }
 }
